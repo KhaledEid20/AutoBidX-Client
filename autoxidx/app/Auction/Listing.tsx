@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import { getItems } from '../Actions/AuctionsActions';
 import { Auction } from '@/types';
+import AuctionCard from './AuctionCard';
 
 export default function Listing() {
     const [auction , setAuction] = useState<Auction[]>([])
@@ -10,9 +11,9 @@ export default function Listing() {
         setAuction(data.results);
     })
   return (
-    <div>
+    <div className='grid grid-cols-3 gap-6'>
         {auction.map(item => (
-            <div>{JSON.stringify(item,null,0)}</div>
+            <AuctionCard auction={item} />
         ))}
     </div>
   )
