@@ -8,8 +8,10 @@ export default function Logo() {
   return (
     <div className='text-green-500 text-3xl font-serif font-semibold flex cursor-pointer'
         onClick={reset}>
-        <FaCarAlt size={35}/>
-        <h3>AutoBidX</h3>
+        <a href="/" className='flex justify justify-between'>
+          <FaCarAlt size={35}/>
+          <h3>AutoBidX</h3>
+        </a>
     </div>
   )
 }

@@ -8,7 +8,7 @@ type props={
 
 export default function AuctionCard({auction} : props) {
   return (
-    <a href='#'>
+    <a href='#' key={auction.id}>
         <div className='relative w-full bg-gray-50 overflow-hidden aspect-video rounded-lg'>
             <img 
                 src={auction.imageUrl}
